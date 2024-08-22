@@ -27,5 +27,5 @@ macro_rules! my_try {
             Ok(val) => val,
             Err(err) => return Err(err.into()),
         }
-    }
+    };
 }

@@ -1,4 +1,8 @@
-use std::{future::Future, pin::Pin, task::{Context, Poll}};
+use std::{
+    future::Future,
+    pin::Pin,
+    task::{Context, Poll},
+};
 
 #[tokio::main]
 async fn main() {
@@ -50,5 +54,5 @@ macro_rules! my_ready {
             std::task::Poll::Ready(v) => std::task::Poll::Ready(v),
             std::task::Poll::Pending => return std::task::Poll::Pending,
         }
-    }
+    };
 }
